@@ -5,12 +5,15 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/Home'; 
 import Features from './components/Features';
 import NavBar from './components/NavBar';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 import './stylesheets/App.css';
 import './stylesheets/Wallet.css';
 
 const App = () => {
 
     const featuresRef = useRef(null);
+    const contactRef = useRef(null); 
 
     return (
         <WalletProvider>
@@ -19,7 +22,9 @@ const App = () => {
                 <div className="main-content">
                     <Home />
                     <Features ref={featuresRef} />
+                    <Contact ref={featuresRef} />
                 </div>
+                <Footer />
             </Router>
         </WalletProvider>
     ); 

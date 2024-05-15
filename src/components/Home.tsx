@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Home: FC = () => {
   return (
     <div className="min-h-screen w-full bg-gradient-radial from-start to-end flex flex-col items-center justify-center text-center p-4 relative" style={{ backgroundSize: 'cover' }}>
-      <img src="homebg.svg" alt="Descriptive Alt Text" className="absolute inset-0 mx-auto my-auto w-auto h-auto max-w-2xl max-h-2xl object-contain" />
+      <img src="homebg.svg" alt="Descriptive Alt Text" className="absolute inset-0 mx-auto my-auto w-auto h-auto max-w-3xl max-h-3xl object-contain" />
       <div className="content z-10">
         <h2 className='mb-4 max-w-lg font-bold mx-auto text-xl' style={{ color: '#ff5467'}}>ZK Reputation</h2>
         <h1 className="text-6xl font-bold mb-4" style={{ color: '#312e81' }}>Secure Your On-Chain Reputation</h1>

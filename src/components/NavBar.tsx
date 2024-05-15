@@ -22,7 +22,7 @@ const NavBar = ({ scrollRef }) => {
                     <Link to="/" className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Home</Link>
                     <button onClick={handleFeatureClick} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Features</button>
                     <Link to="/use-cases" className='nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium'>Use Cases</Link>
-                    <Link to="/contact" className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Contact</Link>
+                    <button onClick={handleFeatureClick} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Contact</button>
                     <a href='https://zkreputation.gitbook.io/zk-reputation-documentation/' className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium" target="_blank" rel="noopener noreferrer">Documentation</a>
                 </div>
                 <ConnectButton className="hidden lg:flex" onConnectError={(e) => console.log(e)}>
@@ -43,7 +43,7 @@ const NavBar = ({ scrollRef }) => {
                     <Link to="/" className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium">Home</Link>
                     <button onClick={handleFeatureClick} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Features</button>
                     <Link to="/use-cases" className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium">Use Cases</Link>
-                    <Link to="/contact" className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium">Contact</Link>
+                    <button onClick={handleFeatureClick} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Features</button>
                     <a href='https://zkreputation.gitbook.io/zk-reputation-documentation/' className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium" target="_blank" rel="noopener noreferrer">Documentation</a>
                     <ConnectButton className="w-full px-3 py-2 mt-2" onConnectError={(e) => console.log(e)}>
                         Connect Wallet
