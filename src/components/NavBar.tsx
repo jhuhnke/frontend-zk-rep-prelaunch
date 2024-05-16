@@ -2,13 +2,12 @@ import React, { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ConnectButton } from '@suiet/wallet-kit';
 
-const NavBar = ({ scrollRef }) => {
+const NavBar = ({ featuresRef, usesRef, contactRef }) => {
     const [isOpen, setIsOpen] = useState(false);
 
-    // Define handleFeatureClick function
-    const handleFeatureClick = () => {
-        if (scrollRef.current) {
-            scrollRef.current.scrollIntoView({ behavior: 'smooth' });
+    const scrollToRef = (ref) => {
+        if (ref && ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
@@ -20,9 +19,9 @@ const NavBar = ({ scrollRef }) => {
                 </div>
                 <div className="flex-1 hidden lg:flex items-center justify-center">
                     <Link to="/" className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Home</Link>
-                    <button onClick={handleFeatureClick} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Features</button>
-                    <Link to="/use-cases" className='nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium'>Use Cases</Link>
-                    <button onClick={handleFeatureClick} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Contact</button>
+                    <button onClick={() => scrollToRef(featuresRef)} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Features</button>
+                    <button onClick={() => scrollToRef(usesRef)} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Use Cases</button>
+                    <button onClick={() => scrollToRef(contactRef)} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Contact</button>
                     <a href='https://zkreputation.gitbook.io/zk-reputation-documentation/' className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium" target="_blank" rel="noopener noreferrer">Documentation</a>
                 </div>
                 <ConnectButton className="hidden lg:flex" onConnectError={(e) => console.log(e)}>
@@ -41,9 +40,9 @@ const NavBar = ({ scrollRef }) => {
             {isOpen && (
                 <div className="absolute right-0 mt-2 py-2 w-48 bg-white shadow-lg rounded-lg lg:hidden">
                     <Link to="/" className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium">Home</Link>
-                    <button onClick={handleFeatureClick} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Features</button>
-                    <Link to="/use-cases" className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium">Use Cases</Link>
-                    <button onClick={handleFeatureClick} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Features</button>
+                    <button onClick={() => scrollToRef(featuresRef)} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Features</button>
+                    <button onClick={() => scrollToRef(usesRef)} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Use Cases</button>
+                    <button onClick={() => scrollToRef(contactRef)} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Contact</button>
                     <a href='https://zkreputation.gitbook.io/zk-reputation-documentation/' className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium" target="_blank" rel="noopener noreferrer">Documentation</a>
                     <ConnectButton className="w-full px-3 py-2 mt-2" onConnectError={(e) => console.log(e)}>
                         Connect Wallet

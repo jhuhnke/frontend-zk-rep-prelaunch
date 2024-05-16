@@ -14,17 +14,18 @@ import './stylesheets/Wallet.css';
 const App = () => {
 
     const featuresRef = useRef(null);
+    const usesRef = useRef(null); 
     const contactRef = useRef(null); 
 
     return (
         <WalletProvider>
             <Router>
-                <NavBar scrollRef={featuresRef} />
+                <NavBar featuresRef={featuresRef} usesRef={usesRef} contactRef={contactRef}/>
                 <div className="main-content">
                     <Home />
                     <Features ref={featuresRef} />
-                    <Uses />
-                    <Contact ref={featuresRef} />
+                    <Uses ref={usesRef} />
+                    <Contact ref={contactRef} />
                 </div>
                 <Footer />
             </Router>
