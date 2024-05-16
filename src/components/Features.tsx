@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 
 const Features = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <div ref={ref} className="w-full flex flex-col items-center justify-center text-center p-4 pt-8 pb-4" style={{ 
+    <div ref={ref} className="w-full flex flex-col items-center justify-center text-center p-4 pt-8 pb-8" style={{ 
       background: "linear-gradient(to top, rgba(224, 195, 252, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%)"
     }}>
       <div className="content">
