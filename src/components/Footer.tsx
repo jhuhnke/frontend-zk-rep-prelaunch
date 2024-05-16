@@ -3,7 +3,7 @@ import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Footer: FC = () => {
     return (
-        <footer className="w-full bg-white border-t-2 border-purple-800 py-4 flex justify-between items-center">
+        <footer className="w-full bg-gray-100 border-t-2 border-purple-800 py-4 flex justify-between items-center">
             <div className="flex justify-start ml-10">
                 <a href="https://twitter.com/zk_reputation" target="_blank" rel="noopener noreferrer" className="text-purple-800 hover:text-black mr-4">
                     <FaTwitter />

@@ -17,9 +17,9 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
     };
 
     return (
-        <div ref={ref} className='contact-wrapper min-h-screen bg-gradient-to-b from-white to-gray-100 flex flex-col items-center py-20'>
+        <div ref={ref} className='contact-wrapper min-h-screen bg-inverse-gradient-2 flex flex-col items-center py-20'>
             <h2 className='text-xl font-bold mb-4' style={{ color: '#ff5467' }}>Contact</h2>
-            <div className="container w-full max-w-4xl p-6 bg-white shadow-lg border-2 border-purple-800 rounded-3xl" style={{ minHeight: '550px' }}>
+            <div className="container w-full max-w-4xl p-6 bg-gray-100 shadow-lg border-2 border-purple-800 rounded-3xl" style={{ minHeight: '550px' }}>
                 {submitted ? (
                     <div className="response-container text-center">
                         <p className="text-xl font-semibold">Thank you for reaching out. You can expect a response in 48-72 business hours.</p>

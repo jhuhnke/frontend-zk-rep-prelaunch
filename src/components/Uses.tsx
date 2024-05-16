@@ -2,9 +2,7 @@ import React, { forwardRef } from 'react';
 
 const Uses = forwardRef<HTMLDivElement>((props, ref) => {
     return(
-        <div ref={ref} className="w-full flex flex-col items-center justify-center text-center p-4 pt-8 pb-8" style={{ 
-            background: "linear-gradient(to top, rgba(224, 195, 252, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%)"
-        }}>
+        <div ref={ref} className="w-full flex flex-col bg-gradient-radial-2 items-center justify-center text-center p-4 pt-8 pb-8">
                 <div className='content mt-12'>
                     <div className='content w-full'>
                     <h2 className='mb-4 max-w-lg font-bold mx-auto text-xl' style={{ color: '#ff5467'}}>Use Cases</h2>

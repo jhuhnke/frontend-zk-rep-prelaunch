@@ -15,6 +15,9 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(circle at top left, rgba(255, 255, 255, 0.7) 10%, rgba(255, 231, 191, 0.7) 50%, rgba(251, 207, 232, 0.7) 75%, rgba(224, 195, 252, 0.7) 100%)',
+        'inverse-gradient': 'radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.7) 5%, rgba(255, 231, 191, 0.7) 40%, rgba(251, 207, 232, 0.7) 70%, rgba(224, 195, 252, 0.7) 100%)',
+        'gradient-radial-2': 'radial-gradient(circle at top left, rgba(255, 255, 255, 0.7) 5%, rgba(255, 231, 191, 0.7) 30%, rgba(251, 207, 232, 0.7) 50%, rgba(224, 195, 252, 0.7) 100%)',
+        'inverse-gradient-2': 'radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.7) 10%, rgba(255, 231, 191, 0.7) 25%, rgba(251, 207, 232, 0.7) 36%, rgba(224, 195, 252, 0.7) 100%)',
       },
       gradientColorStops: theme => ({
         ...theme('colors'),
