@@ -1,9 +1,9 @@
-import React, { FC } from 'react';
+import React, { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 
-const Home: FC = () => {
+const Home = forwardRef<HTMLDivElement>((props, ref) => {
   return (
-    <div className="min-h-screen w-full bg-gradient-radial from-start to-end flex flex-col items-center justify-center text-center p-4 relative" style={{ backgroundSize: 'cover' }}>
+    <div ref={ref} className="min-h-screen w-full bg-gradient-radial from-start to-end flex flex-col items-center justify-center text-center p-4 relative" style={{ backgroundSize: 'cover' }}>
       <img src="homebg.svg" alt="Descriptive Alt Text" className="absolute inset-0 mx-auto my-auto w-auto h-auto max-w-3xl max-h-3xl object-contain" />
       <div className="content z-10">
         <h2 className='mb-4 max-w-lg font-bold mx-auto text-xl' style={{ color: '#ff5467'}}>ZK Reputation</h2>
@@ -20,6 +20,6 @@ const Home: FC = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Home;

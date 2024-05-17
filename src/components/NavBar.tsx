@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ConnectButton } from '@suiet/wallet-kit';
 
-const NavBar = ({ featuresRef, usesRef, contactRef }) => {
+const NavBar = ({ mode, homeRef, featuresRef, usesRef, contactRef }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const scrollToRef = (ref) => {
@@ -18,10 +18,18 @@ const NavBar = ({ featuresRef, usesRef, contactRef }) => {
                     <img src="/reppy-logo.png" alt="Logo" className="h-8 md:h-10" />
                 </div>
                 <div className="flex-1 hidden lg:flex items-center justify-center">
-                    <Link to="/" className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Home</Link>
-                    <button onClick={() => scrollToRef(featuresRef)} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Features</button>
-                    <button onClick={() => scrollToRef(usesRef)} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Use Cases</button>
-                    <button onClick={() => scrollToRef(contactRef)} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Contact</button>
+                    {mode === 'main' ? (
+                        <>
+                            <button onClick={() => scrollToRef(homeRef)} className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium">Home</button>
+                            <button onClick={() => scrollToRef(featuresRef)} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Features</button>
+                            <button onClick={() => scrollToRef(usesRef)} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Use Cases</button>
+                            <button onClick={() => scrollToRef(contactRef)} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Contact</button>
+                        </>
+                    ) : (
+                        <>
+                            <Link to="/" className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Home</Link>
+                        </>
+                    )}
                     <a href='https://zkreputation.gitbook.io/zk-reputation-documentation/' className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium" target="_blank" rel="noopener noreferrer">Documentation</a>
                 </div>
                 <ConnectButton className="hidden lg:flex" onConnectError={(e) => console.log(e)}>
@@ -39,10 +47,18 @@ const NavBar = ({ featuresRef, usesRef, contactRef }) => {
             </div>
             {isOpen && (
                 <div className="absolute right-0 mt-2 py-2 w-48 bg-white shadow-lg rounded-lg lg:hidden">
-                    <Link to="/" className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium">Home</Link>
-                    <button onClick={() => scrollToRef(featuresRef)} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Features</button>
-                    <button onClick={() => scrollToRef(usesRef)} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Use Cases</button>
-                    <button onClick={() => scrollToRef(contactRef)} className="nav-link text-purple-800 hover:text-gray-600 px-3 py-2 rounded-md text-m font-medium">Contact</button>
+                    {mode === 'main' ? (
+                        <>
+                            <button onClick={() => scrollToRef(homeRef)} className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium">Home</button>
+                            <button onClick={() => scrollToRef(featuresRef)} className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium">Features</button>
+                            <button onClick={() => scrollToRef(usesRef)} className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium">Use Cases</button>
+                            <button onClick={() => scrollToRef(contactRef)} className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium">Contact</button>
+                        </>
+                    ) : (
+                        <>
+                            <Link to="/" className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium">Home</Link>
+                        </>
+                    )}
                     <a href='https://zkreputation.gitbook.io/zk-reputation-documentation/' className="block text-gray-800 hover:text-gray-600 px-3 py-2 rounded-md text-base font-medium" target="_blank" rel="noopener noreferrer">Documentation</a>
                     <ConnectButton className="w-full px-3 py-2 mt-2" onConnectError={(e) => console.log(e)}>
                         Connect Wallet
