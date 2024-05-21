@@ -13,7 +13,7 @@ const Features = forwardRef<HTMLDivElement>((props, ref) => {
             <img src="creditcard.png" alt="Credit Card" className="w-50 h-50 mb-4 flex-shrink-0"/>
             <div className="flex-grow">
               <h3 className="text-2xl font-semibold text-purple-800 mb-2">Credit Scores</h3>
-              <p>Manage your account settings and configurations efficiently.</p>
+              <p>Secure, transparent, and tamper-proof assessments of creditworthiness in the decentralized world.</p>
             </div>
           </div>
           {/* Feature Box 2 */}
@@ -21,7 +21,7 @@ const Features = forwardRef<HTMLDivElement>((props, ref) => {
             <img src="money.png" alt="Money" className="w-50 h-50 mb-4 flex-shrink-0"/>
             <div className="flex-grow">
               <h3 className="text-2xl font-semibold text-purple-800 mb-2">KYC Credentials</h3>
-              <p>Execute trades quickly and securely with state-of-the-art technology.</p>
+              <p>Revolutionize your identity verification process, ensuring immutable and easily accessible regulatory compliance.</p>
             </div>
           </div>
           {/* Feature Box 3 */}
@@ -29,7 +29,7 @@ const Features = forwardRef<HTMLDivElement>((props, ref) => {
             <img src="data.png" alt="Data" className="w-50 h-50 mb-4 flex-shrink-0"/>
             <div className="flex-grow">
               <h3 className="text-2xl font-semibold text-purple-800 mb-2">On-Chain Organizations</h3>
-              <p>Access comprehensive analytics and reports to make informed decisions.</p>
+              <p>Empower your enterprise with fully on-chain organizations, delivering unparalleled transparency and efficiency.</p>
             </div>
           </div>
         </div>

@@ -11,7 +11,7 @@ const Uses = forwardRef<HTMLDivElement>((props, ref) => {
                     <div className="flex w-full items-center justify-between px-12 mt-12 mb-12">
                         <div className="use-case-container flex-1 text-left flex flex-col justify-center">
                             <h1 className="text-6xl font-bold mb-4" style={{ color: '#312e81' }}>Stay Compliant In An Ever Changing Regulatory Landscape</h1>
-                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat minim mollit non duis enim velit</p>
+                            <p>Navigate regulatory complexities with ease by leveraging cutting-edge blockchain technology to ensure your organization remains compliant and agile in an ever-changing landscape.</p>
                         </div>
                         <div className="blank-card flex-1 bg-white shadow-lg border-2 border-purple-800 rounded-3xl p-6" style={{
                             minHeight: '400px',
@@ -66,7 +66,7 @@ const Uses = forwardRef<HTMLDivElement>((props, ref) => {
                             </div>
                             <div className="use-case-container flex-1 text-left flex flex-col justify-center">
                                 <h1 className="text-6xl font-bold mb-4" style={{ color: '#312e81' }}>Building Community Fully On-Chain</h1>
-                                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat minim mollit non duis enim velit</p>
+                                <p>Foster a vibrant, transparent, and engaged community by leveraging fully on-chain solutions for seamless collaboration and governance.</p>
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@ const Uses = forwardRef<HTMLDivElement>((props, ref) => {
                     <div className="flex w-full items-center justify-between px-12">
                         <div className="use-case-container flex-1 text-left flex flex-col justify-center mt-12 mb-12">
                             <h1 className="text-6xl font-bold mb-4" style={{ color: '#312e81' }}>Access Larger Loans And Trade RWAs</h1>
-                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat minim mollit non duis enim velit</p>
+                            <p>Unlock the potential for larger loans and seamless trading of real-world assets through the power of decentralized finance and blockchain technology.</p>
                         </div>
                         <div className="blank-card flex-1 bg-white shadow-lg border-2 border-purple-800 rounded-3xl p-6" style={{
                             minHeight: '400px',

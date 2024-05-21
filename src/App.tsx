@@ -8,8 +8,22 @@ import Features from './components/Features';
 import Uses from './components/Uses';
 import Contact from './components/Contact';
 import Application from './components/Application';
+import Presale from './components/Presale'; 
+import PresaleSuccess from './components/PresaleSuccess';
+import '@suiet/wallet-kit/style.css';
 import './stylesheets/App.css';
 import './stylesheets/Wallet.css';
+
+const NavBarWrapper = ({ homeRef, featuresRef, usesRef, contactRef }) => {
+    const location = useLocation();
+    const isAppNavBar = ['/app', '/presale-pass', '/presale-success'].includes(location.pathname);
+
+    return (
+        isAppNavBar ? 
+            <NavBar mode="app" homeRef={null} featuresRef={null} usesRef={null} contactRef={null} /> : 
+            <NavBar mode="main" homeRef={homeRef} featuresRef={featuresRef} usesRef={usesRef} contactRef={contactRef} />
+    );
+};
 
 const App = () => {
     const homeRef = useRef(null); 
@@ -20,11 +34,7 @@ const App = () => {
     return (
         <WalletProvider>
             <Router>
-                <Route render={({ location }) => (
-                    location.pathname === "/app" ? 
-                        <NavBar mode="app" homeRef={null} featuresRef={null} usesRef={null} contactRef={null} /> : 
-                        <NavBar mode="main" homeRef={null} featuresRef={featuresRef} usesRef={usesRef} contactRef={contactRef} />
-                )} />
+                <NavBarWrapper homeRef={homeRef} featuresRef={featuresRef} usesRef={usesRef} contactRef={contactRef} />
                 <Switch>
                     <Route path="/" exact>
                         <div className="main-content">
@@ -35,6 +45,8 @@ const App = () => {
                         </div>
                     </Route>
                     <Route path="/app" component={Application} />
+                    <Route path="/presale-pass" component={Presale} />
+                    <Route path="/presale-success" component={PresaleSuccess} />
                 </Switch>
                 <Footer />
             </Router>

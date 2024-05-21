@@ -3,27 +3,41 @@ import { Link } from 'react-router-dom';
 
 const Application: FC = () => {
   return (
-    <div className='bg-gradient-radial min-h-screen flex flex-col items-center justify-center pt-20'> {/* Added pt-20 to add padding at the top */}
+    <div className='bg-gradient-radial min-h-screen flex flex-col items-center justify-center pt-20'> 
       <div className="w-full max-w-4xl px-4 py-6">
         <div className="grid grid-cols-1 gap-4">
           {/* Active cards */}
+          {/* Mint Presale NFT */}
+          <Card 
+            imageUrl='./cert.webp'
+            heading="Presale Pass"
+            paragraph="Secure Your Place in The Token Presale and A Future Discount On Protocol Use."
+            buttonText="Start"
+            clickable={true}
+            linkTo="/presale-pass"
+          />
+
+          {/*Identity Certificate */}
           <Card
             imageUrl="./cert.webp"
             heading="Verify Your Real World Identity"
             paragraph="Scan your passport machine readable zone to generate an identity soulbound token."
-            buttonText="Start"
-            clickable={true}
+            buttonText="Coming Soon"
+            clickable={false}
             linkTo="/mint-id"
           />
+
+          {/*Social Certificate */}
           <Card
             imageUrl="./cert.webp"
             heading="Claim your social credentials"
             paragraph="Get a unique ID that proves ownership over your social media accounts."
-            buttonText="Start"
-            clickable={true}
+            buttonText="Coming Soon"
+            clickable={false}
             linkTo="/mint-social"
           />
-          {/* Upcoming cards */}
+
+          {/* On-Chain Credit Score */}
           <Card
             imageUrl="./cert.webp"
             heading="Get your on-chain credit score"
@@ -32,6 +46,17 @@ const Application: FC = () => {
             clickable={false}
             linkTo="/"
           />
+
+          {/* DAO / On-Chain Organization */}
+          <Card
+            imageUrl="./cert.webp"
+            heading="Your Organization, Fully On-Chain"
+            paragraph="Create your group and assign members roles"
+            buttonText="Coming Soon"
+            clickable={false}
+            linkTo='/dao'
+          />
+          
         </div>
       </div>
     </div>
@@ -50,7 +75,7 @@ const Card = ({ imageUrl, heading, paragraph, buttonText, clickable, linkTo }) =
             {buttonText}
           </Link>
         ) : (
-          <button className="block text-center text-white bg-pink-300 hover:bg-pink-500 font-semibold py-4 px-6 rounded-full shadow-lg border-2 border-purple-800 hover:border-purple-900 transition-colors duration-300 cursor-not-allowed" disabled>
+          <button className="block text-center text-white bg-gray-400 font-semibold py-2 px-4 rounded-full shadow-lg border-2 border-gray-400 cursor-not-allowed" disabled>
             {buttonText}
           </button>
         )}
