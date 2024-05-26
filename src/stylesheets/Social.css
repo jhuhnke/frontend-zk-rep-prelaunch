@@ -1,0 +1,18 @@
+.supabase-auth-ui_ui-button {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 9999px;
+    background-color: #ff5467;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #312e81;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.supabase-auth-ui_ui-button:hover {
+    background-color: #ff7f7f;
+    border-color: #312e81;
+    color: black;
+}

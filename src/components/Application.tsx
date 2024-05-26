@@ -22,9 +22,9 @@ const Application: FC = () => {
             imageUrl="./cert.webp"
             heading="Verify Your Real World Identity"
             paragraph="Scan your passport machine readable zone to generate an identity soulbound token."
-            buttonText="Coming Soon"
-            clickable={false}
-            linkTo="/mint-id"
+            buttonText="Start"
+            clickable={true}
+            linkTo="/identity"
           />
 
           {/*Social Certificate */}
@@ -32,9 +32,9 @@ const Application: FC = () => {
             imageUrl="./cert.webp"
             heading="Claim your social credentials"
             paragraph="Get a unique ID that proves ownership over your social media accounts."
-            buttonText="Coming Soon"
-            clickable={false}
-            linkTo="/mint-social"
+            buttonText="Start"
+            clickable={true}
+            linkTo="/social"
           />
 
           {/* On-Chain Credit Score */}
@@ -42,9 +42,9 @@ const Application: FC = () => {
             imageUrl="./cert.webp"
             heading="Get your on-chain credit score"
             paragraph="Verify your reputation based on your on-chain history."
-            buttonText="Coming Soon"
-            clickable={false}
-            linkTo="/"
+            buttonText="Start"
+            clickable={true}
+            linkTo="/credit-score"
           />
 
           {/* DAO / On-Chain Organization */}
@@ -52,8 +52,8 @@ const Application: FC = () => {
             imageUrl="./cert.webp"
             heading="Your Organization, Fully On-Chain"
             paragraph="Create your group and assign members roles"
-            buttonText="Coming Soon"
-            clickable={false}
+            buttonText="Start"
+            clickable={true}
             linkTo='/dao'
           />
           
