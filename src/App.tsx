@@ -10,13 +10,34 @@ import Contact from './components/Contact';
 import Application from './components/Application';
 import Presale from './components/Presale'; 
 import PresaleSuccess from './components/PresaleSuccess';
+import Identity from './components/Identity'; 
+import Social from './components/Social';
+import Credit from './components/Credit'; 
+import Dao from './components/Dao'; 
+import IdentitySuccess from './components/IdentitySuccess'; 
+import SocialSuccess from './components/SocialSuccess';
+import CreateDAOSuccess from './components/CreateDaoSuccess';
+import AddMemberSuccess from './components/AddMemberSuccess';
 import '@suiet/wallet-kit/style.css';
 import './stylesheets/App.css';
 import './stylesheets/Wallet.css';
 
 const NavBarWrapper = ({ homeRef, featuresRef, usesRef, contactRef }) => {
     const location = useLocation();
-    const isAppNavBar = ['/app', '/presale-pass', '/presale-success'].includes(location.pathname);
+    const isAppNavBar = [
+        '/app', 
+        '/presale-pass', 
+        '/presale-success', 
+        '/identity', 
+        '/social', 
+        '/mint-social',
+        '/credit-score', 
+        '/dao', 
+        '/identity-success', 
+        '/social-success', 
+        '/dao-success', 
+        '/member-success'
+    ].includes(location.pathname);
 
     return (
         isAppNavBar ? 
@@ -47,6 +68,15 @@ const App = () => {
                     <Route path="/app" component={Application} />
                     <Route path="/presale-pass" component={Presale} />
                     <Route path="/presale-success" component={PresaleSuccess} />
+                    <Route path="/identity" component={Identity} />
+                    <Route path='/social' component={Social} />
+                    <Route path='mint-social' component={Social} />
+                    <Route path='/credit-score' component={Credit} />
+                    <Route path='/dao' component={Dao} />
+                    <Route path='/identity-success' component={IdentitySuccess} />
+                    <Route path='/social-success' component={SocialSuccess} />
+                    <Route path='/dao-success' component={CreateDAOSuccess} />
+                    <Route path='/member-success' component={AddMemberSuccess} />
                 </Switch>
                 <Footer />
             </Router>

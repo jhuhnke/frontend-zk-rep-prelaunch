@@ -1,5 +1,5 @@
 // ===== Testnet Package ID Version 1 =====
-export const PACKAGE_ID = '0x04545711f6066627f33e177a6b538b1bd9d9c82bef2851c8607831020753cb56'; 
+export const PACKAGE_ID = '0x9c71f6c97a4d292ecf6ccda55a35473c6bd03fcc048abfa40b6ffd793b50cd23'; 
 export const RPC_API_URL = 'https://fullnode.testnet.sui.io:433';
 
 // ===== Testnet Package - Early Bird Pass =====
